@@ -13,7 +13,7 @@ const guestbook = {
   },
   // add a single guestbood entry
   add(name, email, comment) {
-    console.log('Sending', name, email, comment)s
+    console.log('Sending', name, email, comment)
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/save-guestbook-entry-sequence.json`,
