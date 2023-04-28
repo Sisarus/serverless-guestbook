@@ -1,7 +1,7 @@
 /**
  * Web application
  */
-const apiUrl = 'https://eu-gb.functions.cloud.ibm.com/api/v1/namespaces/febe0feb-6bcd-4f3c-bcc4-a4f1e5e09e58/actions/guestbook';
+const apiUrl = 'https://eu-gb.functions.appdomain.cloud/api/v1/web/febe0feb-6bcd-4f3c-bcc4-a4f1e5e09e58/guestbook';
 const guestbook = {
   // retrieve the existing guestbook entries
   get() {
@@ -13,7 +13,7 @@ const guestbook = {
   },
   // add a single guestbood entry
   add(name, email, comment) {
-    console.log('Sending', name, email, comment)
+    console.log('Sending', name, email, comment)s
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/save-guestbook-entry-sequence.json`,
